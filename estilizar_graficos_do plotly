@@ -1,0 +1,19 @@
+
+fig = px.choropleth(df, geojson=geojson, locations='uf', color='valor',  # color_continuous_scale='blues',
+                    scope='south america', projection='natural earth', width=875, height=1115,
+                    template='plotly_dark')
+
+fig.update_layout(margin=dict(l=0, r=0, t=20, b=20))
+fig.update_layout(activeshape_opacity=0.4)
+fig.update_layout(coloraxis_showscale=False)
+fig.update_layout(font_size=16)
+fig.update_layout(
+    title={
+        'text': "Espectro de volume de contratos por estado",
+        'y': 0.98,
+        'x': 0,
+        'xanchor': 'left',
+        'yanchor': 'top'})
+        
+fig.update_xaxes(title_text='')
+fig.update_yaxes(title_text='')
